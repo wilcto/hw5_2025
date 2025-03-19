@@ -1,7 +1,19 @@
+/* I know the rubric has a section for commenting, but I find myself going back 
+   and just adding comments in at the end whenever a rubric calls for it, which is what I did here.
+   I almost never add commenting to my code unless I am working on something I don't fully understand. 
+   I feel like any more comments added onto this would just be pointless, so hopefully I don't lose
+   points over it. */
+
+
+/* Mobile View */
+
+/* Step 1 */
 body {
     font-family: 'Poppins', serif;
     background: #f1f1f1 url('../images/concrete_seamless.png');
 }
+
+/* Step 2*/
 
 @keyframes logoAnimation {
     from {
@@ -18,20 +30,28 @@ body {
     animation: logoAnimation 5s ease-in-out;
 }
 
+/* Step 3 */
+
 header {
     display:flex;
     flex-direction: column;
     align-items:center;
 }
 
+/* Step 4 */
+
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
+/* Step 5 */
+
 a:visited {
     color: inherit;
 }
+
+/* Step 6 */
 
 .card > header {
     background: #288088;
@@ -42,6 +62,8 @@ a:visited {
     border-top-right-radius: 50px;
     justify-content: center;
 }
+
+/* Step 7 and 8 */
 
 .card {
     display: flex;
@@ -58,11 +80,15 @@ a:visited {
     flex-wrap: wrap;
 }
 
+/* Step 9 */
+
 .gallery img {
     width: 300px;
     border: solid 10px #50C7C7;
     margin: 10px;
 }
+
+/* Step 10 */
 
 .gallery {
     display: flex;
@@ -70,7 +96,14 @@ a:visited {
     justify-content: center;
 }
 
+
+
+/* Large Screen View */
+
+
+
 @media screen and (min-width:900px){
+    /* Step 11 */
     header{
         flex-direction: row;
         flex-wrap: wrap;
@@ -82,6 +115,7 @@ a:visited {
         flex-direction: row;
     }
 
+    /* Step 12 */
     .card {
         flex-basis: 275px;
     }
@@ -94,29 +128,45 @@ a:visited {
         justify-content: left;
     }
 
+    /* Step 13 */
     body > header{
         position: fixed;
         top: 0;
         width:100%;
     }
 
+    /* Added this to make sure nothing gets clipped from the top */
     .about {
         margin-top:100px;
     }
 }
 
+
+
+/* Reduced Motion */
+
+
 @media screen and (prefers-reduced-motion){
+    /* Step 14 */
     #logo{
         animation: none;
     }
 }
 
+
+
+/* Print View */
+
+
+
 @media print{
+    /* Step 15 and 16 */
     body{
         font-family: Arial, Helvetica;
         background-image:none;
     }
 
+    /* Step 17 */
     header{
         flex-direction: row;
 
@@ -135,21 +185,30 @@ a:visited {
         width: 250px;
     }
 
-    .gallery, #gallery{
-        display: none;
-    }
-
-    .card ul :nth-child(2)::after {
-        content: "\1F44D";
-    }
+    /* Step 18 */
 
     .pricing{
         flex-direction: row;
         flex-wrap: nowrap;
     }
 
+    /* Step 19 */
+
     .card {
         flex-basis: 325px;
         border: 2px solid #45ADDD;
     }
+
+    /* Step 20 */
+
+    .gallery, #gallery{
+        display: none;
+    }
+
+    /* Step 21 */
+
+    .card ul :nth-child(2)::after {
+        content: "\1F44D";
+    }
+    
 }
